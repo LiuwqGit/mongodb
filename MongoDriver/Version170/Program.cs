@@ -101,6 +101,15 @@ namespace Version170
             //查询指定查询条件的全部数据
             var result3 = col.FindAs<Users>(query);
 
+            //sql:SELECT * FROM TABLE
+            MongoCursor<Users> u = col.FindAllAs<Users>();
+            //SQL:SELECT * FROM table WHERE name>10 AND name <20
+            QueryDocument query1 = new QueryDocument();
+            BsonDocument b = new BsonDocument();
+            b.Add("$gt", 10);
+            b.Add("$lt", 20);
+            query1.Add("name", b);
+
         }
 
         #endregion
