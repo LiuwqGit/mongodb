@@ -1,0 +1,11 @@
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\OfficialDriver.exe.config
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\OfficialDriver.exe
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\OfficialDriver.pdb
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\MongoDB.Bson.dll
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\MongoDB.Driver.dll
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\obj\Debug\OfficialDriver.csprojResolveAssemblyReference.cache
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\obj\Debug\OfficialDriver.exe
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\obj\Debug\OfficialDriver.pdb
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\MongoDB.Driver.Core.dll
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\MongoDB.Bson.xml
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\OfficialDriver\bin\Debug\MongoDB.Driver.xml
