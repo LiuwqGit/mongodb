@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
 
-namespace Version141
+namespace Version170
 {
     class Program
     {
@@ -23,8 +23,9 @@ namespace Version141
             //Insert();
             //Update();
             //Delete();
-            Query();
-            Console.WriteLine("Query");
+            //Query();
+            InsertDocument();
+            Console.WriteLine("InsertDocument");
         }
         /// <summary>
         /// 初始化数据库文档
@@ -39,6 +40,9 @@ namespace Version141
             MongoCollection col = db.GetCollection(dbCollection);
             return col;
         }
+
+        #region CRUD Example
+
         private static void Insert()
         {
             MongoCollection col = Init();
@@ -52,6 +56,16 @@ namespace Version141
                 //执行插入操作
                 col.Insert<Users>(users);
             }
+        }
+
+        private static void InsertDocument()
+        {
+            MongoCollection col = Init();
+            BsonDocument b = new BsonDocument();
+            b.Add("Uid", 120);
+            b.Add("Name", "liuwq");
+            b.Add("Password", "123");
+            col.Insert(b);
         }
 
         private static void Update()
@@ -88,6 +102,8 @@ namespace Version141
             var result3 = col.FindAs<Users>(query);
 
         }
+
+        #endregion
 
         public class Users
         {
