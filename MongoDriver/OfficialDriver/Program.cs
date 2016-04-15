@@ -27,9 +27,6 @@ namespace OfficialDriver
 
 
 
-
-
-
             //Create();
         }
 
@@ -64,14 +61,14 @@ namespace OfficialDriver
 
             #region official git explain
 
-            //Task await collection.InsertOneAsync(new BsonDocument("Name", "Jack"));
 
-            //var list =   await collection.Find(new BsonDocument("Name", "Jack")).ToListAsync();
 
-            //foreach (var document in list)
-            //{
-            //    Console.WriteLine(document["Name"]);
-            //}
+            var list = await collection.Find(new BsonDocument("Name", "Jack")).ToListAsync();
+
+            foreach (var document in list)
+            {
+                Console.WriteLine(document["Name"]);
+            }
             #endregion
 
             #endregion
@@ -81,6 +78,15 @@ namespace OfficialDriver
         {
 
         }
+
+        private static async Task<T> Insert2()
+        {
+            var client = new MongoClient(conStr);
+            var database = client.GetDatabase(dbName);
+            var collection = database.GetCollection<BsonDocument>("myclass");
+
+        }
+
 
         public class People
         {
