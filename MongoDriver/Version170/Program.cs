@@ -20,12 +20,13 @@ namespace Version170
 
         static void Main(string[] args)
         {
-            //Insert();
+            Insert();
             //Update();
             //Delete();
             //Query();
-            InsertDocument();
+            //InsertDocument();
             Console.WriteLine("InsertDocument");
+
         }
         /// <summary>
         /// 初始化数据库文档
@@ -55,6 +56,10 @@ namespace Version170
                 //获得Users集合，如果数据库中没有，系统会自动新建一个 
                 //执行插入操作
                 col.Insert<Users>(users);
+
+                BsonDocument b = (BsonDocument)users;
+                b.Add("method", "Insert");
+                MongoLogHelper.Instance().LogForMongo(b);
             }
         }
 
@@ -66,6 +71,8 @@ namespace Version170
             b.Add("Name", "liuwq");
             b.Add("Password", "123");
             col.Insert(b);
+            b.Add("method", "InsertDocument");
+            MongoLogHelper.Instance().LogForMongo(b);
         }
 
         private static void Update()
@@ -114,11 +121,23 @@ namespace Version170
 
         #endregion
 
+
+
+
         public class Users
         {
             public ObjectId _id { get; set; }//此属性必须
             public string Name { get; set; }
             public string Sex { get; set; }
+
+            public static explicit operator BsonDocument(Users v)
+            {
+                BsonDocument b = new BsonDocument();
+                b.Add("_id", v._id);
+                b.Add("name", v.Name);
+                b.Add("sex", v.Sex);
+                return b;
+            }
         }
     }
 }
