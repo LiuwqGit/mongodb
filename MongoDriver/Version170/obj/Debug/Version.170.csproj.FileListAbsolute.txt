@@ -1,2 +1,0 @@
-E:\CODE\git.yonyou\csharp-mongo\MongoDriver\Version141\bin\Debug\Version.170.exe.config
-E:\CODE\git.yonyou\csharp-mongo\MongoDriver\Version141\bin\Debug\Version170.exe.config

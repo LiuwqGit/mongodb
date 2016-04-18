@@ -53,6 +53,7 @@ namespace Version170
                 Users users = new Users();
                 users.Name = "liusc" + i.ToString();
                 users.Sex = "man";
+                users.Age = i + 1;
                 //获得Users集合，如果数据库中没有，系统会自动新建一个 
                 //执行插入操作
                 col.Insert<Users>(users);
@@ -129,6 +130,7 @@ namespace Version170
             public ObjectId _id { get; set; }//此属性必须
             public string Name { get; set; }
             public string Sex { get; set; }
+            public int Age { get; set; }
 
             public static explicit operator BsonDocument(Users v)
             {
@@ -136,6 +138,7 @@ namespace Version170
                 b.Add("_id", v._id);
                 b.Add("name", v.Name);
                 b.Add("sex", v.Sex);
+                b.Add("age",v.Age);
                 return b;
             }
         }
