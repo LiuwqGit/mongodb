@@ -10,3 +10,4 @@ E:\CODE\git.yonyou\csharp-mongo\MongoDriver\Version170\bin\Debug\MongoDB.Driver.
 E:\CODE\git.yonyou\csharp-mongo\MongoDriver\Version170\bin\Debug\MongoDB.Driver.xml
 E:\CODE\git.yonyou\csharp-mongo\MongoDriver\Version170\obj\Debug\Version170.exe
 E:\CODE\git.yonyou\csharp-mongo\MongoDriver\Version170\obj\Debug\Version170.pdb
+E:\CODE\git.yonyou\csharp-mongo\MongoDriver\Version170\obj\Debug\Version170.csprojResolveAssemblyReference.cache

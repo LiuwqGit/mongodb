@@ -63,7 +63,7 @@ namespace Version170
             MongoDatabase db = server.GetDatabase(dbName);
             MongoCollection col = db.GetCollection(dbCollection);
             document.Add("Author", "liuweiqin");
-            document.Add("ts", new DateTime());
+            document.Add("ts", DateTime.Now);
             col.Insert(document);
         }
 

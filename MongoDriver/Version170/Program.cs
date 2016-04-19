@@ -51,8 +51,8 @@ namespace Version170
             for (int i = 0; i < 10; i++)
             {
                 Users users = new Users();
-                users.Name = "liusc" + i.ToString();
-                users.Sex = "man";
+                users.Name = "liu" + i.ToString();
+                users.Sex = "woman";
                 users.Age = i + 1;
                 //获得Users集合，如果数据库中没有，系统会自动新建一个 
                 //执行插入操作
